@@ -260,8 +260,8 @@ class Encoder2_MFFusion_Decoder(nn.Module):
 
             if mask is not None:
                 mask = F.interpolate(mask.float(), [5, 5, 25], mode='nearest')
-                fg_p = F.avg_pool3d(fusion_out4[0:mask.size(0)] * mask, (5, 5, 25))
-                bg_p = F.avg_pool3d(fusion_out4[0:mask.size(0)] * (1 - mask), (5, 5, 25))
+                fg_p = fusion_out4[0:mask.size(0)] * mask / torch.sum(mask)
+                bg_p = fusion_out4[0:mask.size(0)] * (1 - mask) / torch.sum(1 - mask)
 
                 return [out_cls_fusion, out_seg, fg_p, bg_p]
             else:
