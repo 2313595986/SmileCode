@@ -319,9 +319,9 @@ class Encoder2_MFFusion_Decoder(nn.Module):
             return [out_cls_fusion, out_seg]
 
 
-class CrossAtt(nn.Module):
+class SpatialFusion(nn.Module):
     def __init__(self, in_channels):
-        super(CrossAtt, self).__init__()
+        super(SpatialFusion, self).__init__()
         self.conv1 = nn.Conv3d(in_channels * 2, in_channels, kernel_size=1, stride=1)
         self.conv2 = nn.Conv3d(in_channels * 2, in_channels, kernel_size=1, stride=1)
         self.bn1 = nn.InstanceNorm3d(in_channels)
@@ -344,9 +344,9 @@ class CrossAtt(nn.Module):
         return fusion_attention_feature
 
 
-class SelfAtt(nn.Module):
+class DimensionAttention(nn.Module):
     def __init__(self, in_channels, x_s, y_s, z_s, r1, r2, r3):
-        super(SelfAtt, self).__init__()
+        super(DimensionAttention, self).__init__()
         self.sex = SEblock(x_s, r1)
         self.sey = SEblock(y_s, r2)
         self.sez = SEblock(z_s, r3)
@@ -363,8 +363,8 @@ class SelfAtt(nn.Module):
 class FeatureFusion(nn.Module):
     def __init__(self, in_channels, x_s, y_s, z_s, r_x, r_y, r_z):
         super(FeatureFusion, self).__init__()
-        self.sa = SelfAtt(in_channels, x_s, y_s, z_s, r_x, r_y, r_z)
-        self.ca = CrossAtt(in_channels)
+        self.sa = DimensionAttention(in_channels, x_s, y_s, z_s, r_x, r_y, r_z)
+        self.ca = SpatialFusion(in_channels)
         self.conv = nn.Conv3d(in_channels*2, in_channels, kernel_size=1, stride=1)
         self.norm = nn.InstanceNorm3d(in_channels)
         self.relu = nn.ReLU()
