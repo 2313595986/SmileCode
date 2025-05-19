@@ -6,7 +6,7 @@ Implementation of the paper:
 Accepted at *MICCAI 2024*
 
 ## 📄 Paper
-[https://arxiv.org/abs/2502.02862](https://link.springer.com/chapter/10.1007/978-3-031-72086-4_68)
+https://link.springer.com/chapter/10.1007/978-3-031-72086-4_68
 
 ## 🧠 Method
 ### Frame work
