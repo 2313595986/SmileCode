@@ -29,7 +29,7 @@ https://link.springer.com/chapter/10.1007/978-3-031-72086-4_68
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/2313595986/SmileCode]
+git clone https://github.com/2313595986/SmileCode
 cd SmileCode
 ```
 
