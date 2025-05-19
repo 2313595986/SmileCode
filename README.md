@@ -10,6 +10,12 @@ Accepted at *MICCAI 2024*
 
 ## 🧠 Method
 ### Frame work
+- **Feature Extraction:** Two ResNet extract features from different modalities and fuse corrective features using the attention module.
+
+- **Segmentor:** A few shot segmentation paradigm is used to implement the segmentation task to enhance the encoder's ability to extract features. Optimize prototypes with the Prototype Correction Module.
+
+- **Classifier:** Performs classification tasks and generates grad-cam maps to indicate suspicious areas.
+  
 ![image](https://github.com/user-attachments/assets/2fc52ec8-c101-406e-a817-b88b3f7dc69a)
 ### Moudle
 ![image](https://github.com/user-attachments/assets/fd0e3e2a-4e50-4dd4-afc2-6c68680de256)
