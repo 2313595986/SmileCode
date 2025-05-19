@@ -17,7 +17,10 @@ Accepted at *MICCAI 2024*
 - **Classifier:** Performs classification tasks and generates grad-cam maps to indicate suspicious areas.
   
 ![image](https://github.com/user-attachments/assets/2fc52ec8-c101-406e-a817-b88b3f7dc69a)
-### Moudle
+### Module
+- **Attention:** Dimensional Attention Module utilizes dimension-wise attention to re-weight the features and fuses the re-weighted features afterwards. Adaptive Spatial Attention Module aggregates the features from two modalities in pixel-level.
+- **Prototype Correction:** It refines the support prototype by query features without introducing extra training parameters.
+
 ![image](https://github.com/user-attachments/assets/fd0e3e2a-4e50-4dd4-afc2-6c68680de256)
 ### Result
 ![image](https://github.com/user-attachments/assets/9662f9d9-e829-4f96-8e2d-c86792f3a3f6)
