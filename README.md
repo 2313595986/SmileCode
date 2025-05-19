@@ -2,7 +2,7 @@
 
 Implementation of the paper:
 
-**" Towards multi-modality fusion and prototype-based feature refinement for clinically significant prostate cancer classification in transrectal ultrasound（MICCAI2024）"**  
+**" Towards multi-modality fusion and prototype-based feature refinement for clinically significant prostate cancer classification in transrectal ultrasound "**  
 Accepted at *MICCAI 2024*
 
 ## 📄 Paper
