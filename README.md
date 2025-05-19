@@ -2,8 +2,8 @@
 
 📄 Implementation of the paper:
 
-**" Towards multi-modality fusion and prototype-based feature refinement for clinically significant prostate cancer classification in transrectal ultrasound "**  [[MICCAI2024](https://link.springer.com/chapter/10.1007/978-3-031-72086-4_68)]
-[[arxiv](https://arxiv.org/pdf/2406.14069)]
+**" Towards multi-modality fusion and prototype-based feature refinement for clinically significant prostate cancer classification in transrectal ultrasound "**  [[MICCAI2024]](https://link.springer.com/chapter/10.1007/978-3-031-72086-4_68)
+[[arxiv]](https://arxiv.org/pdf/2406.14069)
 
 ## 🧠 Method
 ### Frame work
